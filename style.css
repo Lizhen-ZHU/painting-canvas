@@ -1,0 +1,48 @@
+body{
+  margin:0;
+  padding:0;
+}
+
+#canvas{
+  background-image:url('https://cdn.shopify.com/s/files/1/1038/1798/products/160316-Scene-Header.jpg?v=1525177731');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh;
+  position:relative;
+}
+
+
+#xxx{background:transparent;
+display:block;
+}
+
+.actions{
+  position:fixed;
+  bottom:10px;
+  left:30px;
+}
+button{
+  outline:none;
+  background:#363636;
+   box-sizing: border-box;
+  /*通过这个可以加宽高边框*/
+  height:36px;
+  padding: 0 16px;
+  text-decoration:none;
+  border-radius:5px;
+  font-size:13px;
+  border:none;
+  color:#F4F4F4;
+}
+.actions > #brush{
+  display:none;
+}
+
+.actions.active > #brush{
+  display:inline-block;
+  background:#BDA786;
+}
+.actions.active > #eraser{
+  display:none;
+}
