@@ -1,48 +1,95 @@
-body{
-  margin:0;
-  padding:0;
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-#canvas{
-  background-image:url('https://cdn.shopify.com/s/files/1/1038/1798/products/160316-Scene-Header.jpg?v=1525177731');
-  background-size:cover;
+ul, ol {
+  list-style: none;
+}
+
+#canvas {
+  background-image: url('https://cdn.shopify.com/s/files/1/1038/1798/products/160316-Scene-Header.jpg?v=1525177731');
+  background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  height:100vh;
-  position:relative;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-
-#xxx{background:transparent;
-display:block;
+#xxx {
+  background: transparent;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.actions{
-  position:fixed;
-  bottom:10px;
-  left:30px;
-}
-button{
-  outline:none;
-  background:#363636;
-   box-sizing: border-box;
-  /*通过这个可以加宽高边框*/
-  height:36px;
-  padding: 0 16px;
-  text-decoration:none;
-  border-radius:5px;
-  font-size:13px;
-  border:none;
-  color:#F4F4F4;
-}
-.actions > #brush{
-  display:none;
+.actions {
+  position: fixed;
+  top: 10px;
+  left: 30px;
 }
 
-.actions.active > #brush{
-  display:inline-block;
-  background:#BDA786;
+.icon {
+  width: 2em;
+  height: 2em;
+  padding: 0.4em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  transition: all 0.3s;
 }
-.actions.active > #eraser{
-  display:none;
+
+#eraser.active {
+  fill: #907D67;
+  transform: translateX(10px);
+}
+
+#pen.active {
+  fill: #907D67;
+  transform: translateX(10px);
+}
+
+#clean.active {
+  fill: #907D67;
+  transform: scale(0.9);
+}
+
+#clean {
+  transform: scale(0.9);
+}
+
+#save.active {
+  fill: #907D67;
+}
+
+.colors {
+  position: fixed;
+  top: 8px;
+  left: 50px;
+}
+
+.colors>li {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.colors>li.yellow {
+  background: #E0AE6E
+}
+
+.colors>li.black {
+  background: #3A5791
+}
+
+.colors>li.red {
+  background: #CA7471
+}
+
+.colors>li.blue {
+  background: #74ADB3
 }
